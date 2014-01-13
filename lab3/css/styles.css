@@ -1,0 +1,84 @@
+/* reset stylesheet to reset browser defaults back to 0 */
+@import url(reset.css);
+
+/* two Google fonts we'll use */
+@import url(https://fonts.googleapis.com/css?family=Cantora+One);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@-webkit-keyframes pulse {
+    0%      {opacity: 0.3;}
+    50%     {opacity: 1;}
+    100%    {opacity: 0.3;}
+}
+@keyframes pulse {
+    0%      {opacity: 0.3;}
+    50%     {opacity: 1;}
+    100%    {opacity: 0.3;}
+}
+
+body {
+	background-image: url(../img/sandpaper.png);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
+article {
+	width: 90%;
+	background-color: #FFF;
+	margin: 20px auto;
+}
+
+header {
+	line-height: 60px;
+	font-family: 'Cantora One', sans-serif;
+	font-size: 200%;
+	color: #EEEDEA;
+	background-color: #907A46;
+	padding: 10px;
+}
+
+header img {
+	height: 60px;
+	float: right;
+	opacity: .7;
+	-webkit-transition:all .2s ease;
+    -moz-transition:all .2s ease;
+    -o-transition:all .2s ease;
+    transition:all .2s ease;
+    -webkit-animation: pulse 5s infinite;
+	animation: pulse 5s infinite;
+}
+
+header img:hover {
+	opacity: 1;
+}
+
+figure {
+	display: inline-block;
+	padding: 10px;
+	background-color: #FFF;
+	-webkit-transition:all 1s ease;
+    -moz-transition:all 1s ease;
+    -o-transition:all 1s ease;
+    transition:all 1s ease;
+}
+
+figure:hover {
+	box-shadow: 2px 2px 6px #555;
+	-webkit-transform:scale(1.5) rotate(360deg);
+    -moz-transform:scale(1.5) rotate(360deg);
+    -ms-transform:scale(1.5) rotate(360deg);
+    -o-transform:scale(1.5) rotate(360deg);
+    transform:scale(1.5) rotate(360deg);
+}
+
+figure img {
+	width: 200px;
+	border: 10px solid #EEE;
+	border-radius: 2px;
+}
+
+figcaption {
+	font-weight: 300;
+	text-align: center;
+	margin-top: 5px;
+}

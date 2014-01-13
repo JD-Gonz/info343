@@ -1,0 +1,6 @@
+/* styles.css 
+    use this for any custom styles
+*/
+input[name="refer-other"] {
+    display: none;
+}

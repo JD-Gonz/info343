@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <title>Dawg Pizza</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="img/logo-vertical.png">
+    <meta name="author" content="1024261">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".pawnee-navbar-menu">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand nav" href="order.html"><span class="label label-success">Order now!</span></a>
+            </div>
+            <div class="collapse navbar-collapse pawnee-navbar-menu">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                </ul>
+            </div>
+        </nav>
+        <header>
+            <a href="index.html"><img src="img/logo.png" alt="Dawg Pizza"></a>
+        </header>
+		<article class="centered">
+		<p>We are open Monday through Saturday from 10:00am to 11:00pm</p>
+		<p>Call:206-555-1212 | <a href="mailto:dawgpizzaseattle@gmail.com">email</a> | Or Come on in: <a target="_blank" href="https://maps.google.com/?q=4306%20UniversityWay%20NE,%20Seattle,%20WA%2098105">4306 University Way NE, Seattle, WA 98105</a></p>
+
+		<div id="pawnee-carousel" class="carousel slide">
+                <!-- slide indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#pawnee-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#pawnee-carousel" data-slide-to="1"></li>
+                    <li data-target="#pawnee-carousel" data-slide-to="2"></li>
+                </ol>
+                <!-- slides --> 
+                <div class="carousel-inner">
+                    <!-- slide -->
+                    <div class="item active">
+                        <a href="menu.html"><img class="pic" src="img/pizza-order.jpg" alt="Menu"></a>
+                        <div class="carousel-caption">
+                            <h3 class="car-text">Menu</h3>
+                            <p>Check out what we got cooking</p>
+                        </div>
+                    </div>
+                    <!-- slide -->
+                    <div class="item">
+                        <a href="aboutus.html"><img class="pic" src="img/pizza-oven.jpg" alt="about us"></a>
+                        <div class="carousel-caption">
+                            <h3 class="car-text">About Us</h3>
+                            <p>Find out what we're all about</p>
+                        </div>
+                    </div>
+                    <!-- slide -->
+                    <div class="item">
+                        <a href="jobs.html"><img class="pic" src="img/pizza-delivery.jpg" alt="job oppertunity"></a>
+                        <div class="carousel-caption">
+                            <h3 class="car-text">Job Opportunities</h3>
+                            <p>See if we're what you're looking for</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#pawnee-carousel" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control" href="#pawnee-carousel" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+        </div>
+		<p>Awesome wood-fired pizza with fresh ingredients baked to order. Come in and eat, or call us for delivery!</p> 
+		<a href="https://twitter.com/DawgPizzaSea" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @DawgPizzaSea</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		<h1>Don't forget to follow us on twitter!</h1>
+		</article>
+
+		<footer class="centered">&#169; Call us for delivery: 206-555-1212</footer>
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script>$('.carousel').carousel();</script>
+</body>
+</html>

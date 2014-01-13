@@ -1,0 +1,38 @@
+.template {
+    display: none;
+}
+
+.sort-ui {
+    margin-bottom: 1em;
+}
+
+.sort-ui .sort-label {
+    font-weight: bold;
+}
+
+.person {
+    clear: both;
+    background-color: #EEE;
+    border: 1px dotted #DDD;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.person .pic {
+    float: left;
+    height: 100px;
+    width: 100px;
+}
+
+.person .name {
+    margin-top: 0;
+}
+
+.person .title {
+    margin-bottom: 0;
+}
+
+.person .details {
+    padding-left: 120px;
+}

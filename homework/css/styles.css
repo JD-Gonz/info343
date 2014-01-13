@@ -1,0 +1,219 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Caesar+Dressing);
+@import url(http://fonts.googleapis.com/css?family=Cherry+Swash:400,700);
+@import url(reset.css);
+
+*:focus {
+	outline:  #A450C3 dotted 2px;
+	background-color: #C0C0C0;
+}
+
+body {
+	background: url(../img/background.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	font-family: "Cherry Swash", sans-serif;
+	font-size: 22px;
+	padding: 50px 0px;
+}
+
+article {
+	padding: 20px 10px;
+	color: #063;
+	background-image: url(../img/retina_wood.png);
+	border-radius: 20px; 
+	opacity: .8;
+}	
+
+header img {
+	width: 90%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+	font-family: "Pacifico", sans-serif; 
+	color: #A60000;
+	font-size: 150%;
+	text-decoration: underline;
+	margin: 5px; 
+}
+
+h2 {
+	font-family: "Caesar Dressing", sans-serif;
+	color: #600;
+	margin: 0px; 
+	clear: both;
+}
+
+aside {
+	font-weight: bold;
+	background-color: #EEE;
+	border: 4px groove #CCC;
+	padding: 10px;
+}
+
+footer {
+	position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    color: #A450C3;
+    background-color: rgba(255,255,64,.9);
+}
+
+.templates {
+    display: none;
+}
+
+.overflow {
+	overflow: hidden;
+}
+
+.centered {
+	text-align: center;
+}
+
+.price {
+	color: #9AA400;
+	font-family: "Caesar Dressing", sans-serif;
+}
+
+.carousel-caption {
+	font-size: 110%;
+	color: #FFFF00;
+	font-family: "Pacifico", sans-serif;
+}
+
+.description{
+	padding-left: 50px;
+	color: #A60000;
+	font-family: "Pacifico", sans-serif;
+}
+
+.carousel { 
+	width:70%;
+	height:60%;
+	margin: 0 auto;
+}
+
+.carousel .item .pic { 
+	width:100%;
+	height:400px;
+}
+
+.picture {
+	width: 65%;
+	height: auto;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.picture-left {
+	position: relative;
+	width: 30%;
+	float: left;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.picture-right {
+	position: relative;
+	width: 30%;
+	float: right;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.cart-footer {
+    border-top: 2px solid #000;
+}
+
+nav {
+	opacity: .8;
+}
+
+.navbar-nav a {
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s;
+	-ms-transition: all .5s;
+	transition: all .5s;
+	
+}
+
+a:link,
+nav a:visited {
+	text-decoration: none;
+}
+
+.navbar-nav a:hover {
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	transform: scale(1.5);
+}
+
+nav:hover {
+	opacity: 1;
+}
+
+
+
+
+@media screen and (max-width: 970px) {
+	.container {
+		font-size: 75%;
+	}
+
+	.carousel {
+        display: none;
+	}
+
+	h2 {
+		font-size: 150%;
+	}
+
+	.navbar-nav a:hover {
+	-webkit-transform: none;
+	-moz-transform: none;
+	-o-transform: none;
+	-ms-transform: none;
+	transform: none;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	header {
+			display: none;
+	}
+
+	.container {
+		font-size: 75%;
+		padding: 50px 0px 0px 0px;
+
+	}
+
+	h2 {
+		font-size: 125%;
+	}
+
+	body {
+		padding: 0px;
+	}
+
+	article {
+		width: 100%;
+		border-radius: 0px
+	}
+
+	.picture {
+		display: none;
+	}
+}

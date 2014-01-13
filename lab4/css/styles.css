@@ -1,0 +1,16 @@
+/* additional styles for the Bootstrap lab */
+/* note that we do not need to import reset.css here because Bootstrap already resets
+the browser default styles before applying their own */
+@media screen and (max-width: 767px) {
+	.carousel {
+	display: none;
+}
+}
+.col-pic {
+	float: left;
+	width: 100px;
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
+
+

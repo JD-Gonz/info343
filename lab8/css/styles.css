@@ -1,0 +1,29 @@
+body {
+    font-weight: 200;
+}
+
+.templates {
+    display: none;
+}
+
+.movie {
+    padding-bottom: 0.5em;
+}
+
+.movie .pic {
+    float: left;
+    margin-right: 1em;
+}
+
+.total-price {
+    font-weight: bold;
+}
+
+.total-row {
+    border-top: 1px solid #AAA;
+}
+
+.button-row {
+    margin-top: 2em;
+    text-align: right;
+}

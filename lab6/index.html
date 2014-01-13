@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up</title>
+
+        <!-- Bootstrap CSS and optional theme -->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="shortcut icon" href="img/signup.png">
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="page-header">
+                <img src="img/signup.png" alt="signup icon" class="pull-right">
+                <h1>Sign Up for Our Mailing List</h1>                
+                <p class="lead">To receive useless marketing materials from us for the rest of your natural life, please fill out the following form!</p>                
+            </div>
+
+            <form method="POST" action="https://courses.washington.edu/info343/signup/" class="form-horizontal signup-form" role="form">
+
+
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="first-name">Name</label>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" name="first-name" id="first-name" placeholder="first name" required
+                    </div>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" name="last-name" id="last-name" placeholder="last name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="addr-1">Address</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" name="addr-1" id="addr-1" placeholder="street address">
+                        <input type="text" class="form-control" name="addr-2">
+                        <input type="text" class="form-control" name="addr-3">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="city">City/State/Zip</label>
+                    <div class="col-lg-10">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" name="city" id="city" placeholder="city">
+                            </div>
+                            <div class="col-lg-3">
+                                <select class="form-control us-states" name="state" id="state">
+                                    <option value="" selected disabled>select a state...</option>
+                                    <!-- rest of states filled via script -->
+                                </select>        
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" name="zip" placeholder="zip code">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="email">Email</label>
+                    <div class="col-lg-10">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="email address" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="phone">Phone</label>
+                    <div class="col-lg-10">
+                        <input type="tel" class="form-control" name="phone" id="phone" placeholder="primary phone number">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="birthday">Birthday</label>
+                    <div class="col-lg-10">
+                        <input type="date" class="form-control" name="birthday" id="birthday">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="refer">How did you hear about us?</label>
+                    <div class="col-lg-5">
+                        <select name="refer" id="refer" class="form-control">
+                            <option value="" selected disabled>choose one...</option>
+                            <option value="friend">From a friend</option>
+                            <option value="ad">Saw an advertisement</option>
+                            <option value="web">Randomly found your web site</option>
+                            <option value="tv">Saw you on "America's Worst Companies"</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-5">
+                        <input type="text" name="refer-other" class="form-control" placeholder="specify other..." disabled>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" checked> Please sell my information to as many other companies as possible!
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-12 text-right">
+                        <button type="button" class="btn btn-default cancel-signup">No Thanks!</button>
+                        <button type="submit" class="btn btn-primary">Sign Me Up!</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div> <!-- .container -->
+
+        <!-- Modal dialog shown when 'No Thanks!' button is pressed -->
+        <!-- this is an optional step for this lab, so if you are not doing
+        this optional step, just ignore this portion of the page. It won't be 
+        visible to the user unless you write the code to show it --> 
+        <div class="modal fade cancel-signup-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Abandon Signup?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you don't want to signup to receive useless marketing spam for the rest of your life? I mean, this is a rare opportunity here. You'd be a fool not to sign up!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">No, Go Back to Signup Form</button>
+                        <button type="button" class="btn btn-primary btn-abandon">Yes, Get Me Out of Here!</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <p><a href="https://github.com/dgonz001/lab6">Lab 6 Repository</a></p>
+
+        <!-- hot link to minified jQuery library, version 2.0.3 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <!-- hot link to minified Bootstrap library, version 3.0.0 -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        
+        <!-- other page scripts -->
+        <script src="js/us-states.js"></script>
+        <script src="js/sign-up.js"></script>
+    </body>
+</html>

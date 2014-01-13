@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>About Widgets-R-Us</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="shortcut icon" href="img/logo-small.png">
+	<meta name="author" content="1024261">
+</head>
+<body>
+	<div class="content-box">
+		<!--#include virtual="inc/header.html" -->
+		<p class="banner"><a href="mailto:sales@widgetsrus.com"> send us email</a> or call us to order any of our products</p>
+		<h2 class="sales">Basic Widget<img class="pull-left" src="img/basic-widget.png" alt="Basic Widget"></h2>This is just your basic widget, nothing fancy <br> $10 each; $100 box of 20
+		<h2 class="sales">Super Widget<img class="pull-left" src="img/super-widget.png" alt="Super Widget"></h2>A higher-end widget that is really super<br> $20 each; $200 box of 20
+		<h2 class="sales">Super-Duper Widget<img class="pull-left" src="img/super-duper-widget.png" alt="Super-Duper Widget"></h2>Our premium widget, the best of its kind!<br> $30 each; $300 box of 20
+		<!--#include virtual="inc/footer.html" -->
+	</div>	
+</body>
+</html>

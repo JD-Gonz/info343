@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+	<title>Menu</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="shortcut icon" href="img/logo-vertical.png">
+	<meta name="author" content="1024261">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".pawnee-navbar-menu">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand nav" href="order.html"><span class="label label-success">Order now!</span></a>
+            </div>
+            <div class="collapse navbar-collapse pawnee-navbar-menu">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                </ul>
+            </div>
+        </nav>
+		<header>
+			<a href="index.html"><img src="img/logo.png" alt="Dawg Pizza"></a>
+		</header>
+		<article>
+		<img class="picture" src="img/pizza-order.jpg" alt="order">
+		<h1 class="centered">Dawg Pizza Menu</h1>
+		
+		<div class="panel-group" id="accordion">
+		  <div class="panel panel-default">
+		    <div class="panel-heading">
+		        <a class="btn btn-default btn-lg btn-block" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+		          <h2>Pizzas</h2>
+		        </a>
+		    </div>
+		    <div id="collapseOne" class="panel-collapse collapse">
+		    	<div class="panel-body">
+		    		<p>All our pizzas are made with hand-thrown thin crust, baked in real wood ovens. Choose from one of these sizes:</p>
+					<ul>
+				        <li><p class="price">Small 12"</p></li>
+				        <li><p class="price">Medium 14"</p></li>
+				        <li><p class="price">Large 17"</p></li>
+			        </ul>
+			        <div class="row">
+					  <div class="col-md-6"><div class="meats"><h2>Meats:</h2></div></div>
+					  <div class="col-md-6"><div class="vegetarians"><h2>vegetarians:</h2></div></div>
+				    </div>
+				    <aside class="centered">All pizzas can be customized for an extra $2.</aside>
+			    </div>
+		    </div>
+		  </div>
+		  <div class="panel panel-default">
+		    <div class="panel-heading">
+		        <a class="btn btn-default btn-lg btn-block" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+		          <h2>Sides</h2>
+		        </a>
+		    </div>
+		    <div id="collapseTwo" class="panel-collapse collapse">
+		      <div class="panel-body">
+		      		<div class="col-md-6"><div class="drinks"><h2>Drinks:</h2></div></div>
+					<div class="col-md-6"><div class="desserts"><h2>Desserts:</h2></div></div>
+		      </div>
+		    </div>
+		  </div>
+	  	</div>
+		</article>	
+	    <footer class="centered">&#169; Call us for delivery: 206-555-1212</footer>
+    </div> <!-- container -->
+
+     	<!-- templates -->
+        <div class="templates">
+
+        	<div class="template-pizzas">
+        		<div class="row">
+	      			<div class="col-md-8">
+	       				<p class="name"></p>
+	      			</div>
+	     			<div class="col-md-4">
+	        			<p class="price">$<span class="small"></span> | $<span class="medium"></span> | $<span class="large"></span></p>
+      				</div>
+  				</div>	
+            	<p class="description"></p>
+        	</div>
+
+        	<div class="template-sides">
+        		<div class="row">
+	      			<div class="col-md-8">
+	       				<p class="name"></p>
+	      			</div>
+	     			<div class="col-md-4">
+	        			<p class="price">$<span class="small"></span></p>
+      				</div>
+  				</div>	
+        	</div>
+
+        </div> <!-- templates -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://www.dawgpizza.com/orders/menu.js"></script>
+    <script src="js/menuRender.js"></script>
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

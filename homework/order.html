@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<head>
+	<title>Order</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="shortcut icon" href="img/logo-vertical.png">
+	<meta name="author" content="1024261">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="container">  
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".pawnee-navbar-menu">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand nav" href="order.html"><span class="label label-success">Order now!</span></a>
+            </div>
+            <div class="collapse navbar-collapse pawnee-navbar-menu">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                </ul>
+            </div>
+        </nav>
+		<header>
+			<a href="index.html"><img src="img/logo.png" alt="Dawg Pizza"></a>
+		</header>
+		<article>
+			<p>we deliver only within the Seattle city limits, between noon and 11:00pm.</p> 
+            <p>We accept cash or all major credit cards. </p>
+
+
+            <div class="row"> <!-- cart -->
+                <div class="col-md-4 col-md-push-8">
+                    <h2>Your Cart</h2>
+                    <div class="cart-items-container"></div> <!-- cart item container -->
+                    <div class="cart-footer">
+                         <div class="row">
+                            <div class="col-xs-8">
+                                Sub-Total:
+                            </div>
+                            <div class="col-xs-4">
+                                <p class="pull-right">$<span class="sub-price"></span></p>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="col-xs-8">
+                                Sales Tax:
+                            </div>
+                            <div class="col-xs-4">
+                                <p class="pull-right">$<span class="tax-price"></span></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-8">
+                                Total:
+                            </div>
+                            <div class="col-xs-4">
+                                <p class="pull-right">$<span class="total-price"></span></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 button-row">
+                                <button id="order" type="button" class="btn btn-success place-order">Place My Order</button>
+                                <button type="button" class="btn btn-danger start-over">Start Over</button>
+                                <p>Delivery: $20 minimum </p>
+                            </div>
+                        </div>                        
+                    </div>
+                </div> <!-- cart -->
+
+                <div class="col-md-8 col-md-pull-4">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li><a href="#information" data-toggle="tab"> Information</a></li>
+                        <li><a id="pizza-tab" href="#pizzas" data-toggle="tab">Pizzas</a></li>
+                        <li><a id="side-tab" href="#sides" data-toggle="tab">Sides</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="information">
+                            <!-- form -->
+                            <form method="POST" action="http://dawgpizza.com/orders/" class="form-horizontal cart-form" role="form">
+                                    <label class="col-md-1 control-label" for="name">Name</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="full name" required>
+                                    <label class="col-md-1 control-label" for="address1">Address</label>
+                                    <input type="text" class="form-control" name="address1" id="address1" placeholder="street address" required>
+                                    <input type="text" class="form-control" name="address2" id="address2">
+                                    <label class="col-md-1 control-label" for="zip">City/State/Zip</label>
+                                    <input type="text" class="form-control" name="city" id="city" placeholder="city">
+                                    <select class="form-control us-states" name="state" id="state">
+                                        <option value="" selected disabled>select a state...</option>
+                                    </select> 
+                                    <input type="text" class="form-control" name="zip" id="zip" placeholder="zip code" required>
+                                    <label class="col-md-1 control-label" for="email">Email</label>
+                                    <input type="email" class="form-control" name="email" placeholder="email address">
+                                    <label class="col-md-1 control-label" for="phone">Phone</label>
+                                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="primary phone number" required>
+                                    <input type="hidden" class="form-control" name="cart" id="cart" required>
+                            </form> <!-- .form -->
+                        </div>    
+                        <div class="tab-pane fade" id="pizzas">
+                            <div class="col-xs-6"><div class="meats"><h2>Meats:</h2></div></div>
+                            <div class="col-xs-6"><div class="vegetarians"><h2>vegetarians:</h2></div></div>
+                        </div>
+                        <div class="tab-pane fade" id="sides">
+                            <h2>Desserts:</h2>
+                            <div class="desserts"></div>
+                            <h2>Drinks:</h2>
+                            <div class="drinks"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div> <!-- .container -->
+
+    <div class="templates">
+
+        <!-- pizza template -->
+        <div class="template-pizzas">
+            <div class="col-xs-8 col-xs-push-1">
+                <p class="name"></p>
+            </div>
+            <div class="col-xs-3">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Sizes <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><button class="btn btn-default btn-block small-button add-to-cart" type="button">Small ($<span class="small"></span>)</button></li>
+                    <li><button class="btn btn-default btn-block medium-button add-to-cart"type="button">Medium ($<span class="medium"></span>)</button></li>
+                    <li><button class="btn btn-default btn-block large-button add-to-cart"type="button">Large ($<span class="large"></span>)</button>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- sides template -->
+        <div class="template-sides">
+            <div class="row">
+                    <div class="col-md-9 col-md-push-1">
+                        <p class="name"></p>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-default btn-block item-button add-to-cart">$<span class="item"></span></button>
+                    </div>
+                </div>  
+            </div>
+
+        <!-- cart item template -->
+        <div class="cart-item-template cart-item row">
+            <div class="col-xs-10">
+                <button type="button" class="btn btn-default btn-xs index remove-item">&times;</button> 
+                    <span class="name"></span> <span class="size"></span>
+            </div>
+            <div class="col-xs-2 col-price">
+                <p>$<span class="price"></span></p>
+            </div>
+        </div>
+    </div> <!-- .templates -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="http://www.dawgpizza.com/orders/menu.js"></script>	
+    <script src="js/statesView.js"></script>
+    <script src="js/us-states.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/check.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/cartView.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+</html>
